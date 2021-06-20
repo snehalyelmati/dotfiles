@@ -30,7 +30,10 @@ floating_modifier $mod
 bindsym $mod+Return exec terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+# kill all windows in all workspaces
+bindsym $mod+Shift+q focus parent,kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
