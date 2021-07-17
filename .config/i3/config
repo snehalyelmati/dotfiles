@@ -151,6 +151,16 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 
+# Open applications on specific workspaces
+assign [class="Code"] $ws3
+assign [class="Alacritty"] $ws2
+
+# Open specific applications in floating mode
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [title="nitrogen"] floating enable sticky enable border normal
+for_window [title="Pamac-manager"] floating enable
+for_window [title="Pavucontrol"] floating enable
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
