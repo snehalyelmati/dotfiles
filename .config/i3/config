@@ -14,10 +14,23 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 11
+font pango:Source Code Pro:style=Regular 11
+# font pango:JetBrains Mono:style=Regular 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 11
+# font pango:DejaVu Sans Mono 10
+
+# Configure border style <normal|1pixel|pixel xx|none|pixel>
+default_border pixel 1
+default_floating_border pixel 1
+
+# Hide borders
+hide_edge_borders none
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -156,6 +169,7 @@ assign [class="Code"] $ws3
 assign [class="Alacritty"] $ws2
 
 # Open specific applications in floating mode
+# for_window [class="^.*"] border pixel 1
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="nitrogen"] floating enable sticky enable border normal
 for_window [title="Pamac-manager"] floating enable
@@ -212,6 +226,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Set inner/outer gaps
+# gaps inner 5
+# gaps outer -2
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -235,4 +253,7 @@ bindsym $mod+p exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 # Redshift
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
+
+# Set wallpaper with feh
+exec_always feh --bg-fill /home/onyx/Pictures/arch_neon.jpg
 
