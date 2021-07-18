@@ -67,6 +67,9 @@ noremap <leader>k :wincmd k<CR>
 noremap <leader>l :wincmd l<CR>
 noremap <leader>u :UndotreeShow<CR>
 noremap <leader>q :qa<CR>
+noremap <leader>r :vertical resize 80<CR>
+noremap <leader>o :only<CR>
+noremap <leader>i :only <bar>:wincmd v <bar> :Ex <bar> :vertical resize 30 <bar> :wincmd l <CR>
 noremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 noremap <leader>ps :Rg<SPACE>
 noremap <silent> <leader>= :vertical resize +10<CR>
