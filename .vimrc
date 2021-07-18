@@ -34,6 +34,8 @@ Plug 'tpope/vim-commentary'
 ""Plug 'airblade/vim-gitgutter'
 Plug 'mkitt/tabline.vim'
 
+""Plug 'chrisbra/Colorizer'
+
 ""Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

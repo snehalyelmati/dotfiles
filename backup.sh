@@ -25,6 +25,8 @@ cp /usr/share/fonts/JetBrainsMono/* ./fonts/JetBrainsMono/
 cp /usr/bin/blurlock .
 cp /usr/bin/i3exit .
 
+git status
+
 echo "Done..."
 }
 
