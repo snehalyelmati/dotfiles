@@ -133,11 +133,11 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 1: 
-set $ws2 2: 
-set $ws3 3: 
-set $ws4 4: 
-set $ws5 5: 
+set $ws1 1:  
+set $ws2 2:  
+set $ws3 3:  
+set $ws4 4:  
+set $ws5 5:  
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -168,6 +168,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 # Open applications on specific workspaces
 assign [class="Code"] $ws3
 assign [class="Alacritty"] $ws2
+assign [class="TelegramDesktop"] $ws5
 
 # Open specific applications in floating mode
 # for_window [class="^.*"] border pixel 1
@@ -175,6 +176,7 @@ for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="nitrogen"] floating enable sticky enable border normal
 for_window [title="Pamac-manager"] floating enable
 for_window [title="Pavucontrol"] floating enable
+for_window [title="Telegram"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
