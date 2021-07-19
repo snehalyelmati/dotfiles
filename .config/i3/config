@@ -167,7 +167,6 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 
 # Open applications on specific workspaces
 assign [class="Code"] $ws3
-assign [class="Alacritty"] $ws2
 assign [class="TelegramDesktop"] $ws5
 
 # Open specific applications in floating mode
