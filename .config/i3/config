@@ -173,7 +173,7 @@ assign [class="TelegramDesktop"] $ws5
 # for_window [class="^.*"] border pixel 1
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="nitrogen"] floating enable sticky enable border normal
-for_window [title="Pamac-manager"] floating enable
+for_window [title="Add/Remove Software"] floating enable
 for_window [title="Pavucontrol"] floating enable
 for_window [title="Telegram"] floating enable
 
