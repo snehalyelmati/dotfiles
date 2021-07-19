@@ -73,7 +73,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+F2 exec google-chrome-stable
-bindsym $mod+F3 exec alacritty -e 'ranger'
+bindsym $mod+F3 exec alacritty -e ranger
 
 # follow mouse
 focus_follows_mouse no
