@@ -12,6 +12,7 @@ cp -R /usr/share/fonts/OTF/* ./fonts/OTF/
 cp /usr/share/fonts/JetBrainsMono/* ./fonts/JetBrainsMono/
 cp /usr/bin/blurlock .
 cp /usr/bin/i3exit .
+cp ~/.p10k.zsh .
 "
 
 cp ~/.vimrc .
@@ -24,6 +25,7 @@ cp -R /usr/share/fonts/OTF/* ./fonts/OTF/
 cp /usr/share/fonts/JetBrainsMono/* ./fonts/JetBrainsMono/
 cp /usr/bin/blurlock .
 cp /usr/bin/i3exit .
+cp ~/.p10k.zsh .
 
 git status
 
