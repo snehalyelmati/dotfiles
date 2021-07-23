@@ -100,6 +100,9 @@ export PATH=$PATH:/$GO_PATH/bin
 # protobuf compiler path
 export PATH="$PATH:$HOME/.protoc/bin"
 
+# /usr/bin
+export PATH="$PATH:/usr/bin"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -122,6 +125,7 @@ export PATH="$PATH:$HOME/.protoc/bin"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias avim="alacritty -e vim . &"
+alias i3config="vim ~/.config/i3/config"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
