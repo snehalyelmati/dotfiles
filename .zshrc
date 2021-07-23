@@ -93,6 +93,13 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# go path
+export GO_PATH=~/go
+export PATH=$PATH:/$GO_PATH/bin
+
+# protobuf compiler path
+export PATH="$PATH:$HOME/.protoc/bin"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
