@@ -13,6 +13,7 @@ cp /usr/share/fonts/JetBrainsMono/* ./fonts/JetBrainsMono/
 cp /usr/bin/blurlock .
 cp /usr/bin/i3exit .
 cp ~/.p10k.zsh .
+cp ~/.config/redshift/* ./.config/redshift/
 "
 
 cp ~/.vimrc .
@@ -26,6 +27,7 @@ cp /usr/share/fonts/JetBrainsMono/* ./fonts/JetBrainsMono/
 cp /usr/bin/blurlock .
 cp /usr/bin/i3exit .
 cp ~/.p10k.zsh .
+cp ~/.config/redshift/* ./.config/redshift/
 
 git status
 
