@@ -177,6 +177,7 @@ for_window [title="nitrogen"] floating enable sticky enable border normal
 for_window [title="Add/Remove Software"] floating enable
 for_window [title="Pavucontrol"] floating enable
 for_window [title="Telegram"] floating enable
+for_window [title="Oracle VM VirtualBox Manager"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
