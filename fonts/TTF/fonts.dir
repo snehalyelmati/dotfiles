@@ -1,4 +1,4 @@
-894
+1094
 AndaleMo.TTF -monotype-andale mono-medium-r-normal--0-0-0-0-c-0-adobe-standard
 AndaleMo.TTF -monotype-andale mono-medium-r-normal--0-0-0-0-c-0-ascii-0
 AndaleMo.TTF -monotype-andale mono-medium-r-normal--0-0-0-0-c-0-ibm-cp437
@@ -143,6 +143,206 @@ Ariali.TTF -monotype-arial-medium-i-normal--0-0-0-0-p-0-koi8-ru
 Ariali.TTF -monotype-arial-medium-i-normal--0-0-0-0-p-0-koi8-u
 Ariali.TTF -monotype-arial-medium-i-normal--0-0-0-0-p-0-koi8-uni
 Ariali.TTF -monotype-arial-medium-i-normal--0-0-0-0-p-0-microsoft-cp1252
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-adobe-standard
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-ascii-0
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso10646-1
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-1
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-10
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-13
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-15
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-16
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-2
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-3
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-4
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-5
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-6
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-7
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-8
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-iso8859-9
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-koi8-e
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-koi8-r
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-koi8-ru
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-koi8-u
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-koi8-uni
+CascadiaCode.ttf -microsoft-cascadia code-medium-r-normal--0-0-0-0-m-0-microsoft-cp1252
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-adobe-standard
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-ascii-0
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso10646-1
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-1
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-10
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-13
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-15
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-16
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-2
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-3
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-4
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-5
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-7
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-iso8859-9
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-koi8-e
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-koi8-r
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-koi8-ru
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-koi8-u
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-koi8-uni
+CascadiaCodeItalic.ttf -microsoft-cascadia code-medium-i-normal--0-0-0-0-m-0-microsoft-cp1252
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-adobe-standard
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-ascii-0
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso10646-1
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-1
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-10
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-13
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-15
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-16
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-2
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-3
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-4
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-5
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-6
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-7
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-8
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-iso8859-9
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-koi8-e
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-koi8-r
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-koi8-ru
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-koi8-u
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-koi8-uni
+CascadiaCodePL.ttf -microsoft-cascadia code pl-medium-r-normal--0-0-0-0-m-0-microsoft-cp1252
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-adobe-standard
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-ascii-0
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso10646-1
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-1
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-10
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-13
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-15
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-16
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-2
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-3
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-4
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-5
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-7
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-iso8859-9
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-koi8-e
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-koi8-r
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-koi8-ru
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-koi8-u
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-koi8-uni
+CascadiaCodePLItalic.ttf -microsoft-cascadia code pl-medium-i-normal--0-0-0-0-m-0-microsoft-cp1252
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-adobe-standard
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-ascii-0
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso10646-1
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-1
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-10
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-13
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-15
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-16
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-2
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-3
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-4
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-5
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-6
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-7
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-8
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-iso8859-9
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-koi8-e
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-koi8-r
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-koi8-ru
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-koi8-u
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-koi8-uni
+CascadiaMono.ttf -microsoft-cascadia mono-medium-r-normal--0-0-0-0-m-0-microsoft-cp1252
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-adobe-standard
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-ascii-0
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso10646-1
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-1
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-10
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-13
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-15
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-16
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-2
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-3
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-4
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-5
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-7
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-iso8859-9
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-koi8-e
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-koi8-r
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-koi8-ru
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-koi8-u
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-koi8-uni
+CascadiaMonoItalic.ttf -microsoft-cascadia mono-medium-i-normal--0-0-0-0-m-0-microsoft-cp1252
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-adobe-standard
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-ascii-0
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso10646-1
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-1
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-10
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-13
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-15
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-16
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-2
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-3
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-4
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-5
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-6
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-7
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-8
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-iso8859-9
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-koi8-e
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-koi8-r
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-koi8-ru
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-koi8-u
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-koi8-uni
+CascadiaMonoPL.ttf -microsoft-cascadia mono pl-medium-r-normal--0-0-0-0-m-0-microsoft-cp1252
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-adobe-standard
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-ascii-0
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-ibm-cp437
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-ibm-cp850
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-ibm-cp852
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-ibm-cp866
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso10646-1
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-1
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-10
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-13
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-15
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-16
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-2
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-3
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-4
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-5
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-7
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-iso8859-9
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-koi8-e
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-koi8-r
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-koi8-ru
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-koi8-u
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-koi8-uni
+CascadiaMonoPLItalic.ttf -microsoft-cascadia mono pl-medium-i-normal--0-0-0-0-m-0-microsoft-cp1252
 Comic.TTF -microsoft-comic sans ms-medium-r-normal--0-0-0-0-p-0-adobe-standard
 Comic.TTF -microsoft-comic sans ms-medium-r-normal--0-0-0-0-p-0-ascii-0
 Comic.TTF -microsoft-comic sans ms-medium-r-normal--0-0-0-0-p-0-iso10646-1
