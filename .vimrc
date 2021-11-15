@@ -20,7 +20,7 @@ set noesckeys
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'jremmen/vim-ripgrep'
+"" Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
@@ -32,8 +32,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
-""Plug 'airblade/vim-gitgutter'
 Plug 'mkitt/tabline.vim'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 ""Plug 'chrisbra/Colorizer'
 
@@ -77,7 +77,7 @@ noremap <leader>r :vertical resize 80<CR>
 noremap <leader>o :only<CR>
 noremap <leader>i :only <bar> :wincmd v <bar> :Ex <CR> :vertical resize 30 <CR> :wincmd l <CR>
 noremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-noremap <leader>ps :Rg<SPACE>
+"" noremap <leader>ps :Rg<SPACE>
 noremap <silent> <leader>= :vertical resize +10<CR>
 noremap <silent> <leader>- :vertical resize -10<CR>
 
@@ -86,3 +86,5 @@ noremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 noremap <silent> <leader>f :YcmCompleter Format<CR>
 
+""LaTex Preview
+noremap <silent> <leader>lp :LLPStartPreview<CR>
