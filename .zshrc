@@ -136,3 +136,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # kubectl auto-completion
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# direnv hook for zsh
+eval "$(direnv hook zsh)"

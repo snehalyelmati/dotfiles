@@ -63,6 +63,9 @@ let g:ctrlp_use_caching=0
 ""set so=10
 let &scrolloff = &lines / 4
 
+""powerline fonts for airline
+let g:airline_powerline_fonts = 1
+
 ""clipboard
 vmap <leader>xy :!xclip -f -sel clip<CR>
 map <leader>xp mz:-lr !xclip -o -sel clip<CR>
