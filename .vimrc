@@ -35,7 +35,7 @@ Plug 'tpope/vim-commentary'
 Plug 'mkitt/tabline.vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
-""Plug 'chrisbra/Colorizer'
+Plug 'chrisbra/Colorizer'
 
 ""Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
