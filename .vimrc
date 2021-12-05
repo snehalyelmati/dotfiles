@@ -20,7 +20,7 @@ set noesckeys
 
 call plug#begin('~/.vim/plugged')
 
-"" Plug 'jremmen/vim-ripgrep'
+Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
@@ -80,7 +80,7 @@ noremap <leader>r :vertical resize 80<CR>
 noremap <leader>o :only<CR>
 noremap <leader>i :only <bar> :wincmd v <bar> :Ex <CR> :vertical resize 30 <CR> :wincmd l <CR>
 noremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-"" noremap <leader>ps :Rg<SPACE>
+noremap <leader>ps :rg<SPACE>
 noremap <silent> <leader>= :vertical resize +10<CR>
 noremap <silent> <leader>- :vertical resize -10<CR>
 
