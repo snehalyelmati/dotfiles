@@ -133,6 +133,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# swtich back and forth between workspaces
+bindsym $mod+Tab workspace back_and_forth
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 1:  
@@ -280,3 +283,9 @@ exec_always feh --bg-fill /home/onyx/Pictures/arch_neon.jpg
 
 # Picom autostart with config
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
