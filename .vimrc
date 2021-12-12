@@ -90,4 +90,4 @@ noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 noremap <silent> <leader>f :YcmCompleter Format<CR>
 
 ""LaTex Preview
-noremap <silent> <leader>lp :LLPStartPreview<CR>
+noremap <silent> <leader>pl :LLPStartPreview<CR>
