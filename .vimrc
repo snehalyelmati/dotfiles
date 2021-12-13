@@ -28,7 +28,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mbbill/undotree'
 
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
+""Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
@@ -42,8 +43,9 @@ Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
-colorscheme PaperColor
 set background=dark
+""let g:gruvbox_contrast_dark = "hard"
+colorscheme gruvbox
 
 ""detect root and use .gitignore
 if executable('rg')
