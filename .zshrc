@@ -103,6 +103,9 @@ export PATH="$PATH:$HOME/.protoc/bin"
 # /usr/bin
 export PATH="$PATH:/usr/bin"
 
+# intellij
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/IDEA-C"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
