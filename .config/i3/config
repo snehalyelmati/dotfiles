@@ -72,7 +72,7 @@ bindsym $mod+q kill
 # bindsym $mod+F1 exec google-chrome-stable
 # bindsym $mod+F2 exec google-chrome-stable --incognito
 bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec firefox --incognito
+bindsym $mod+F2 exec firefox -private-window
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec thunar
 
