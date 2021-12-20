@@ -69,10 +69,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
-# bindsym $mod+F1 exec google-chrome-stable
-# bindsym $mod+F2 exec google-chrome-stable --incognito
-bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec firefox -private-window
+bindsym $mod+F1 exec google-chrome-stable
+bindsym $mod+F2 exec google-chrome-stable --incognito
+# bindsym $mod+F1 exec firefox
+# bindsym $mod+F2 exec firefox -private-window
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec thunar
 
@@ -255,7 +255,7 @@ exec --no-startup-id redshift-gtk
 exec_always feh --bg-fill /home/onyx/Pictures/arch_neon.jpg
 
 # Picom autostart with config
-# exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
