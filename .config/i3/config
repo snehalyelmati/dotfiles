@@ -23,12 +23,12 @@ font pango:Source Code Pro:style=Bold 11
 # font pango:DejaVu Sans Mono 10
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+default_border pixel 3
 default_floating_border pixel 1
 
 # Set inner/outer gaps
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer -2
 
 # Hide borders
 hide_edge_borders none
@@ -69,15 +69,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+F1 exec google-chrome-stable
-bindsym $mod+F2 exec google-chrome-stable --incognito
+# bindsym $mod+F1 exec google-chrome-stable
+# bindsym $mod+F2 exec google-chrome-stable --incognito
+bindsym $mod+F1 exec firefox
+bindsym $mod+F2 exec firefox --incognito
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec thunar
 
@@ -272,18 +267,17 @@ bindsym XF86AudioPrev exec playerctl previous
 #THEME#
 #######
 
-# set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
+#start of window title bars & borders section
+# class                 border  bground text    indicator child_border
+client.focused          #313638 #E0DFD5 #313638 #E8E9EB   #5F676A
+client.focused_inactive #313638 #5F676A #E8E9EB #484E50   #5F676A
+client.unfocused        #313638 #313638 #E8E9EB #313638   #313638
+client.urgent           #2F343A #F06543 #E8E9EB #F06543   #F06543
+client.placeholder      #313638 #313638 #E8E9EB #313638   #313638
 
-#start of bar section
+client.background       #FFFFFF
+#end of window title bars & borders section
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -291,41 +285,25 @@ bar {
     status_command i3status
 	status_command i3status -c ~/.config/i3/i3status.conf
 	tray_output primary
-    colors {
-        # bar background color
-		separator #444444
+	colors {
 		background #222222
-		statusline #f1f1f1
-        # workspaces section            
-        #                    border		backgr.		text
-        # focused_workspace    $aqua		$aqua		$darkgray
-        # inactive_workspace   $darkgray	$darkgray	$yellow
-        # active_workspace     $darkgray	$darkgray	$yellow
-        # urgent_workspace     $red		$red		$bg
-		focused_workspace   #888888    #CECECE   #000000
-		active_workspace    #333333    #333333   #888888
-		inactive_workspace  #333333    #333333   #f1f1f1
-		urgent_workspace    #eb709b    #eb709b   #ffffff
+		statusline #E0DFD5
+ 		separator  #444444
 
-		binding_mode        #2f343a    #900000   #ffffff
-    }
+		focused_workspace  #E0DFD5 #E0DFD5 #222222
+		active_workspace   #333333 #222222 #E0DFD5
+		inactive_workspace #333333 #222222 #E0DFD5
+		urgent_workspace   #2F343A #F06543 #222222
+		binding_mode       #2F343A #F4A261 #222222
+  	}
 }
 #end of bar section
 
-#start of window title bars & borders section
+# start dmenu (a program launcher)
+# A more modern dmenu replacement is rofi:
+# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# There also is i3-dmenu-desktop which only displays applications shipping a
+# .desktop file. It is a wrapper around dmenu, so you need that installed.
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec "dmenu_run -nf '#E8E9EB' -nb '#222222' -sb '#E0DFD5' -sf '#222222' -fn 'JetbrainsMono-10' -p 'dmenu prompt >'"
 
-# green gruvbox
-# class                 border|backgr|text|indicator|child_border
-client.focused          $green $green $darkgray $purple $darkgray
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-client.urgent           $red $red $white $red $red
-
-# blue gruvbox
-# class                 border|backgr|text|indicator|child_border
-# client.focused          $blue $blue $darkgray $purple $darkgray
-# client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-# client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-# client.urgent           $red $red $white $red $red
-
-#end of window title bars & borders section
