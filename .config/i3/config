@@ -284,7 +284,6 @@ client.background       #FFFFFF
 bar {
     status_command i3status
 	status_command i3status -c ~/.config/i3/i3status.conf
-	tray_output primary
 	colors {
 		background #222222
 		statusline #E0DFD5
