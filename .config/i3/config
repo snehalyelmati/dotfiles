@@ -24,7 +24,7 @@ font pango:Source Code Pro:style=Bold 11
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 3
-default_floating_border pixel 1
+default_floating_border pixel 0
 
 # Set inner/outer gaps
 gaps inner 5
