@@ -15,6 +15,7 @@ cp /usr/bin/blurlock .
 cp /usr/bin/i3exit .
 cp ~/.p10k.zsh .
 cp ~/.config/redshift/* ./.config/redshift/
+cp ~/.tmux.conf .
 "
 
 cp ~/.vimrc .
@@ -30,6 +31,7 @@ cp /usr/bin/blurlock .
 cp /usr/bin/i3exit .
 cp ~/.p10k.zsh .
 cp ~/.config/redshift/* ./.config/redshift/
+cp ~/.tmux.conf .
 
 git status
 
