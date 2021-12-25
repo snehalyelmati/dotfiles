@@ -34,7 +34,7 @@ My Linux dotfiles, I use [Arch](https://archlinux.org/) btw.
 - [`.tmux.conf`](./.tmux.conf) - tmux configuration file.
 - [`.vimrc`](./.vimrc) - vim configuration file.
 - [`.zshrc`](./.zshrc) - zsh configuration file.
-- [`20-intel.conf`](./20-intel.conf) - config file to reduce screen-tearing on Arch based systems, to be used with [xf86-video-intel](https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel) driver.
+- [`20-intel.conf`](./20-intel.conf) - config file to fix screen-tearing on Arch based systems, to be used with [xf86-video-intel](https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel) driver.
 - [`backup.sh`](./backup.sh) - simple script to make a copy of all the specified dotfiles.
 - [`blurlock`](./blurlock), [`i3exit`](./i3exit) - [Manjaro](https://manjaro.org/)'s lockscreen scripts for i3.
 

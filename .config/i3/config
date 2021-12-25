@@ -43,6 +43,7 @@ smart_borders on
 # autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id pamac-tray
+exec --no-startup-id birdtray
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -172,6 +173,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 # Open applications on specific workspaces
 assign [class="Code"] $ws3
 assign [class="TelegramDesktop"] $ws5
+# assign [class="Thunderbird"] $ws1
 
 # Open specific applications in floating mode
 # for_window [class="^.*"] border pixel 1
