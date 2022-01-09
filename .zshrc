@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -78,7 +78,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
 plugins=(
+	evalcache
+	zsh-nvm
 	git
 	zsh-completions
 	zsh-syntax-highlighting
@@ -95,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 
 # go path
 export GO_PATH=~/go
+export GO_PERSONAL=~/go/src/github.com/snehalyelmati
 export PATH=$PATH:/$GO_PATH/bin
 
 # protobuf compiler path
@@ -105,6 +110,9 @@ export PATH="$PATH:/usr/bin"
 
 # intellij
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/IDEA-C"
+
+# scripts path
+export PATH="$PATH:$HOME/.scripts"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -127,7 +135,7 @@ export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/IDEA-C"
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias avim="alacritty -e vim . &"
+alias vimw="neww vim 'vim .'"
 alias i3config="vim ~/.config/i3/config"
 alias gdiff="git difftool"
 alias tmux="tmux -u"
@@ -135,12 +143,27 @@ alias tmux="tmux -u"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # kubectl auto-completion
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # direnv hook for zsh
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
+_evalcache direnv hook zsh > /dev/null 2>&1
+
+# pfetch
+pfetch
+
+# timing zsh start-up time
+timezsh() {
+	shell=${1-$SHELL}
+	timer=$(python -c 'from time import time; print(int(round(time() * 1000)))')
+	times=10
+	for i in $(seq 1 $times); do /usr/bin/time $shell > /dev/null 2>&1 -i -c exit; done
+	now=$(python -c 'from time import time; print(int(round(time() * 1000)))')
+	elapsed=$(($now-$timer))
+	echo "Average ZSH start-up time:" $(($elapsed / $times)) "ms"
+}
