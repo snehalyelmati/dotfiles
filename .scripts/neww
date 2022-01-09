@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# create a new tmux window after the current window with 1:name and 2:command
+tmux neww -a -t $(tmux display-message -p '#W') -n $1 $2 
+

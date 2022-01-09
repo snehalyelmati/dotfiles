@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# set session name
+SESSION="monkey"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $GO_PERSONAL/monkey
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "go"
+
+	# open vim in a new window
+	tmux neww -a -t $SESSION -n "vim-go" -c $GO_PERSONAL/monkey "vim ."
+
+	# switch to the first window
+	tmux switch -t $SESSION:"go"
+fi

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# set session name
+SESSION="CP"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $GO_PERSONAL/competitive-programming-golang
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "go"
+
+	# send a command to a specific window
+	# tmux send-keys -t $SESSION:"go" "ls -l" C-m
+
+	# create a new window with name in a folder
+	tmux neww -t $SESSION -n "java" -c $HOME/Documents/java-projects
+
+	# switch to the first window
+	tmux switch -t $SESSION:"go"
+fi

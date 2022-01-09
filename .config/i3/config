@@ -75,6 +75,7 @@ bindsym $mod+F2 exec google-chrome-stable --incognito
 # bindsym $mod+F2 exec firefox -private-window
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec thunar
+bindsym $mod+F12 exec alacritty -e bpytop
 
 # follow mouse
 focus_follows_mouse no
@@ -172,7 +173,6 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 # Open applications on specific workspaces
 assign [class="Code"] $ws3
 assign [class="TelegramDesktop"] $ws5
-assign [class="Thunderbird"] $ws6
 
 # Open specific applications in floating mode
 # for_window [class="^.*"] border pixel 1
@@ -184,6 +184,13 @@ for_window [title="Telegram"] floating enable
 for_window [title="Oracle VM VirtualBox Manager"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Zoom Cloud Meetings"] floating enable
+for_window [title="BpyTOP"] floating enable
+
+# To set the window size
+for_window [title="BpyTOP"] resize set 1400 786
+
+# To position windows
+for_window [title="BpyTOP"] move position center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
