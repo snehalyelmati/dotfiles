@@ -1,8 +1,8 @@
 # dotfiles
 
-_Note: if you want to give these dotfiles a try, you should fork this repo, review the code and remove things you don't want or need. Use at your own risk._
-
 My Linux dotfiles, I use [Arch](https://archlinux.org/) btw.
+
+_Note: if you want to give these dotfiles a try, you should fork this repo, review the code and remove things you don't want or need. Use at your own risk._
 
 - [`i3WM`](https://github.com/i3/i3) - A tiling window manager for X11.
 - [`tmux`](https://github.com/tmux/tmux) - A terminal multiplexer, runs on OpenBSD, FreeBSD, NetBSD, Linux, macOS and Solaris.
@@ -20,6 +20,7 @@ My Linux dotfiles, I use [Arch](https://archlinux.org/) btw.
 - [`ranger`](https://github.com/ranger/ranger) - A VIM-inspired filemanager for the console.
 - [`picom`](https://github.com/yshui/picom/tree/next) - A standalone compositor for X11.
 - [`redshift`](https://github.com/jonls/redshift) - Redshift adjusts the color temperature of your screen according to your surroundings.
+- [`pfetch`](https://github.com/dylanaraps/pfetch) - A minimal system information tool written in POSIX sh.
 
 ## Screenshots
 
@@ -37,6 +38,7 @@ My Linux dotfiles, I use [Arch](https://archlinux.org/) btw.
 - [`20-intel.conf`](./20-intel.conf) - config file to fix screen-tearing on Arch based systems, to be used with [xf86-video-intel](https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel) driver.
 - [`backup.sh`](./backup.sh) - simple script to make a copy of all the specified dotfiles.
 - [`blurlock`](./blurlock), [`i3exit`](./i3exit) - [Manjaro](https://manjaro.org/)'s lockscreen scripts for i3.
+- [`.scripts`](./.scripts) - custom scripts for easy access, including tmux scripts.
 
 ## Installation
 
@@ -44,6 +46,7 @@ My Linux dotfiles, I use [Arch](https://archlinux.org/) btw.
 - Copy `.p10k.zsh`, `.tmux.conf`, `.vimrc` and `.zshrc` to `~/`.
 - Copy `blurlock` and `i3exit` to `/usr/bin`.
 - Copy fonts from `fonts` folder to `/usr/share/fonts` or `~/.local/share/fonts`.
+- Copy contents of `.scripts/` to `~/.scripts`.
 - For `20-intel.conf` refer to this section in the [ArchWiki](https://wiki.archlinux.org/title/intel_graphics#Xorg_configuration).
 
 ## References
