@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# set session name
+SESSION="TDBOT"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $GO_PERSONAL/telegram-bot-golang
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "main"
+
+	# open vim in a new window
+	tmux neww -a -t $SESSION -n "vim-go" -c $GO_PERSONAL/telegram-bot-golang "vim ."
+
+	# open minesweeper-hexarch in a new window
+	tmux neww -a -t $SESSION -n "minesweeper-tree" -c $HOME/Documents/minesweeper-hex-arch-sample
+	tmux neww -a -t $SESSION -n "minesweeper-vim" -c $HOME/Documents/minesweeper-hex-arch-sample "vim ."
+
+	# switch to the first window
+	tmux switch -t $SESSION:"main"
+fi

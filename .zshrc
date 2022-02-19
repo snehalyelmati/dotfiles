@@ -136,9 +136,12 @@ export PATH="$PATH:$HOME/.scripts"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimw="neww vim 'vim .'"
+alias nvimw="neww nvim 'nvim .'"
 alias i3config="vim ~/.config/i3/config"
 alias gdiff="git difftool"
 alias tmux="tmux -u"
+alias c="clear"
+alias ct="clear; tree"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -167,3 +170,9 @@ timezsh() {
 	elapsed=$(($now-$timer))
 	echo "Average ZSH start-up time:" $(($elapsed / $times)) "ms"
 }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/onyx/google-cloud-sdk/path.zsh.inc' ]; then . '/home/onyx/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/onyx/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/onyx/google-cloud-sdk/completion.zsh.inc'; fi

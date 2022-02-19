@@ -28,6 +28,7 @@ Plug 'vim-utils/vim-man'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mbbill/undotree'
+Plug 'tmsvg/pear-tree'
 
 Plug 'morhetz/gruvbox'
 ""Plug 'NLKNguyen/papercolor-theme'

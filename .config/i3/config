@@ -71,11 +71,11 @@ bindsym $mod+q kill
 
 bindsym $mod+F1 exec google-chrome-stable
 bindsym $mod+F2 exec google-chrome-stable --incognito
-# bindsym $mod+F1 exec firefox
-# bindsym $mod+F2 exec firefox -private-window
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec thunar
-bindsym $mod+F12 exec alacritty -e bpytop
+bindsym $mod+F10 exec brave --incognito
+bindsym $mod+F11 exec telegram-desktop
+bindsym $mod+F12 exec alacritty --title btop -e btop --utf-force
 
 # follow mouse
 focus_follows_mouse no
@@ -172,7 +172,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 
 # Open applications on specific workspaces
 assign [class="Code"] $ws3
-assign [class="TelegramDesktop"] $ws5
+# assign [class="TelegramDesktop"] $ws5
 
 # Open specific applications in floating mode
 # for_window [class="^.*"] border pixel 1
@@ -180,17 +180,18 @@ for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="nitrogen"] floating enable sticky enable border normal
 for_window [title="Add/Remove Software"] floating enable
 for_window [title="Pavucontrol"] floating enable
-for_window [title="Telegram"] floating enable
+for_window [class="TelegramDesktop"] floating enable
 for_window [title="Oracle VM VirtualBox Manager"] floating enable
 for_window [class="Thunar"] floating enable
-for_window [class="Zoom Cloud Meetings"] floating enable
-for_window [title="BpyTOP"] floating enable
+for_window [title="btop"] floating enable
 
 # To set the window size
-for_window [title="BpyTOP"] resize set 1400 786
+for_window [title="btop"] resize set 1800 1000
+for_window [class="TelegramDesktop"] resize set 1800 1000
 
 # To position windows
-for_window [title="BpyTOP"] move position center
+for_window [title="btop"] move position center
+for_window [class="TelegramDesktop"] move position center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -292,6 +293,7 @@ client.background       #FFFFFF
 bar {
     status_command i3status
 	status_command i3status -c ~/.config/i3/i3status.conf
+    position bottom
 	colors {
 		background #222222
 		statusline #E0DFD5
