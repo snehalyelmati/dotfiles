@@ -11,6 +11,14 @@ _Note: if you want to give these dotfiles a try, you should fork this repo, revi
   - [`p10k`](https://github.com/romkatv/powerlevel10k) - Powerlevel10k is a theme for Zsh.
   - [`autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like fast/unobtrusive autosuggestions for zsh.
   - [`syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell-like syntax highlighting for Zsh.
+- [`neovim`](https://neovim.io/) - Hyperextensible Vim-based text editor.
+  - [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig) - Quickstart configurations for the Nvim LSP client.
+  - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - A highly extensible fuzzy finder built with Lua.
+  - [`treesitter`](https://tree-sitter.github.io/tree-sitter/) - Tree-sitter is a parser generator tool and an incremental parsing library, built with Rust.
+  - [`nvim-tree`](https://github.com/kyazdani42/nvim-tree.lua) - A file explorer tree written in Lua.
+  - [`null-ls`](https://github.com/jose-elias-alvarez/null-ls.nvim) - null-ls helps to inject LSP diagnostics, code actions, and more via Lua.
+  - [`gitsigns`](https://github.com/lewis6991/gitsigns.nvim) - Super fast git decorations for neovim implemented purely in lua/teal.
+  - [`gruvbox-material`](https://github.com/sainnhe/gruvbox-material) - A modified version of gruvbox colorscheme with softer colors.
 - [`vim`](https://github.com/vim/vim) - Vim is a free and open-source text editor which is highly configurable, built to make creating and changing any kind of text very efficient.
   - [`ctrlp`](https://github.com/ctrlpvim/ctrlp.vim) - Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
   - [`YouCompleteMe`](https://github.com/ycm-core/YouCompleteMe) - A code-completion engine for Vim.
@@ -26,11 +34,11 @@ _Note: if you want to give these dotfiles a try, you should fork this repo, revi
 
 ![tmux.png](./images/tmux.png)
 
-![vim.png](/images/vim.png)
+![nvim.png](/images/nvim.png)
 
 ## Description
 
-- [`.config`](./.config) - consists of configuration files for Alacritty, i3WM, picom, ranger and Redshift.
+- [`.config`](./.config) - consists of configuration files for Neovim, Alacritty, i3WM, picom, ranger and Redshift.
 - [`.p10k.zsh`](./.p10k.zsh) - Powerlevel10k theme config file for zsh.
 - [`.tmux.conf`](./.tmux.conf) - tmux configuration file.
 - [`.vimrc`](./.vimrc) - vim configuration file.
@@ -53,3 +61,4 @@ _Note: if you want to give these dotfiles a try, you should fork this repo, revi
 
 - [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [Webpro's dotfiles](https://github.com/webpro/awesome-dotfiles)
+- [Neovim from Scratch by chris@machine](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)

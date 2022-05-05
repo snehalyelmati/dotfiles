@@ -107,6 +107,7 @@ export PATH="$PATH:$HOME/.protoc/bin"
 
 # /usr/bin
 export PATH="$PATH:/usr/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # intellij
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/IDEA-C"
@@ -133,11 +134,11 @@ export PATH="$PATH:$HOME/.scripts"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias vimw="neww vim 'vim .'"
 alias nvimw="neww nvim 'nvim .'"
-alias i3config="vim ~/.config/i3/config"
+alias i3config="nvim ~/.config/i3/config"
 alias gdiff="git difftool"
 alias tmux="tmux -u"
 alias c="clear"
