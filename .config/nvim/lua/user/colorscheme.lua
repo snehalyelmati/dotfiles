@@ -2,7 +2,7 @@
 
 local colorscheme = "gruvbox-material"
 -- vim.g.gruvbox_contrast_dark = "hard"
-vim.cmd("let g:gruvbox_contrast_dark = 'soft'")
+vim.cmd("let g:gruvbox_contrast_dark = 'hard'")
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 

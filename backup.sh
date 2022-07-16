@@ -6,7 +6,7 @@ cp ~/.vimrc .
 cp ~/.zshrc .
 cp ~/.config/alacritty/alacritty.yml ./.config/alacritty
 cp ~/.config/i3/* ./.config/i3/
-cp ~/.config/nvim/* ./.config/nvim/
+cp -r ~/.config/nvim/* ./.config/nvim/
 cp ~/.config/picom/* ./.config/picom/
 cp ~/.config/ranger/* ./.config/ranger/
 rm -r ./fonts/TTF; mkdir ./fonts/TTF; cp -R /usr/share/fonts/TTF/* ./fonts/TTF/
@@ -24,7 +24,7 @@ cp ~/.vimrc .
 cp ~/.zshrc .
 cp ~/.config/alacritty/alacritty.yml ./.config/alacritty
 cp ~/.config/i3/* ./.config/i3/
-cp ~/.config/nvim/* ./.config/nvim/
+cp -r ~/.config/nvim/* ./.config/nvim/
 cp ~/.config/picom/* ./.config/picom/
 cp ~/.config/ranger/* ./.config/ranger/
 rm -r ./fonts/TTF; mkdir ./fonts/TTF; cp -R /usr/share/fonts/TTF/* ./fonts/TTF/

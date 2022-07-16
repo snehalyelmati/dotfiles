@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 
 # go path
 export GO_PATH=~/go
+export GOOS=linux
 export GO_PERSONAL=~/go/src/github.com/snehalyelmati
 export PATH=$PATH:/$GO_PATH/bin
 
@@ -143,6 +144,7 @@ alias gdiff="git difftool"
 alias tmux="tmux -u"
 alias c="clear"
 alias ct="clear; tree"
+alias cpf="clear; pfetch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
