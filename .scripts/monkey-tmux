@@ -13,7 +13,7 @@ then
 	tmux rename-window -t $SESSION:1 "go"
 
 	# open vim in a new window
-	tmux neww -a -t $SESSION -n "vim-go" -c $GO_PERSONAL/monkey "vim ."
+	tmux neww -a -t $SESSION -n "vim-go" -c $GO_PERSONAL/monkey "nvim ."
 
 	# switch to the first window
 	tmux switch -t $SESSION:"go"

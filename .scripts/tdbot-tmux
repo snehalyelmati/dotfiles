@@ -13,11 +13,11 @@ then
 	tmux rename-window -t $SESSION:1 "main"
 
 	# open vim in a new window
-	tmux neww -a -t $SESSION -n "vim-go" -c $GO_PERSONAL/telegram-bot-golang "vim ."
+	tmux neww -a -t $SESSION -n "vim-go" -c $GO_PERSONAL/telegram-bot-golang "nvim ."
 
 	# open minesweeper-hexarch in a new window
 	tmux neww -a -t $SESSION -n "minesweeper-tree" -c $HOME/Documents/minesweeper-hex-arch-sample
-	tmux neww -a -t $SESSION -n "minesweeper-vim" -c $HOME/Documents/minesweeper-hex-arch-sample "vim ."
+	tmux neww -a -t $SESSION -n "minesweeper-vim" -c $HOME/Documents/minesweeper-hex-arch-sample "nvim ."
 
 	# switch to the first window
 	tmux switch -t $SESSION:"main"
