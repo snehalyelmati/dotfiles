@@ -261,7 +261,7 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 
 # Set wallpaper with feh
-exec_always feh --bg-fill /home/onyx/Pictures/arch_neon.jpg
+exec_always feh --bg-fill /home/onyx/Pictures/wallhaven-8oz631.jpg
 
 # Picom autostart with config
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
