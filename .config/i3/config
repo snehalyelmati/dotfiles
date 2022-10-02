@@ -26,8 +26,8 @@ default_border pixel 3
 default_floating_border pixel 0
 
 # Set inner/outer gaps
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer 3
 
 # Hide borders
 hide_edge_borders none
@@ -69,11 +69,13 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+F1 exec google-chrome-stable
-bindsym $mod+F2 exec google-chrome-stable --incognito
+bindsym $mod+F1 exec firefox
+bindsym $mod+F2 exec firefox -private-window
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec thunar
-bindsym $mod+F10 exec brave --incognito
+bindsym $mod+F8 exec pamac-manager
+bindsym $mod+F9 exec blueman-manager
+bindsym $mod+F10 exec pavucontrol
 bindsym $mod+F11 exec telegram-desktop
 bindsym $mod+F12 exec alacritty --title btop -e btop --utf-force
 
@@ -179,19 +181,24 @@ assign [class="Code"] $ws3
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="nitrogen"] floating enable sticky enable border normal
 for_window [title="Add/Remove Software"] floating enable
-for_window [title="Pavucontrol"] floating enable
 for_window [class="TelegramDesktop"] floating enable
 for_window [title="Oracle VM VirtualBox Manager"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [title="btop"] floating enable
+for_window [title="Volume Control"] floating enable
+for_window [title="Bluetooth Devices"] floating enable
 
 # To set the window size
 for_window [title="btop"] resize set 1800 1000
 for_window [class="TelegramDesktop"] resize set 1800 1000
+for_window [title="Volume Control"] resize set 800 1000
+for_window [title="Bluetooth Devices"] resize set 800 500
 
 # To position windows
 for_window [title="btop"] move position center
 for_window [class="TelegramDesktop"] move position center
+for_window [title="Volume Control"] move position center
+for_window [title="Bluetooth Devices"] move position center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -252,9 +259,9 @@ exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
-bindsym $mod+i exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod+o exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
-bindsym $mod+p exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod+i exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -2.5% #decrease sound volume
+bindsym $mod+o exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +2.5% #increase sound volume
+bindsym $mod+p exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Redshift
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
@@ -271,6 +278,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# Blueman - Bluetooth GUI
+exec blueman-applet
 
 #######
 #THEME#

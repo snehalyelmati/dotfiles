@@ -116,6 +116,9 @@ export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/IDEA-C"
 # scripts path
 export PATH="$PATH:$HOME/.scripts"
 
+# dotnet
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
