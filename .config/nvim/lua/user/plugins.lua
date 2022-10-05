@@ -48,31 +48,32 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
-	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
+	use("akinsho/bufferline.nvim")
+	-- use("akinsho/toggleterm.nvim")
 
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	-- use("lunarvim/darkplus.nvim")
 	-- use("nikolvs/vim-sunbather")
+
 	use("ellisonleao/gruvbox.nvim")
 	use("sainnhe/gruvbox-material")
 
 	-- cmp plugins
-	use("hrsh7th/nvim-cmp") -- The completion plugin
-	use("hrsh7th/cmp-buffer") -- buffer completions
-	use("hrsh7th/cmp-path") -- path completions
-	use("hrsh7th/cmp-cmdline") -- cmdline completions
-	use("saadparwaiz1/cmp_luasnip") -- snippet completions
-	use("hrsh7th/cmp-nvim-lsp")
+    use ( "hrsh7th/nvim-cmp") -- The completion plugin
+    use ( "hrsh7th/cmp-buffer") -- buffer completions
+    use ( "hrsh7th/cmp-path") -- path completions
+    use ( "saadparwaiz1/cmp_luasnip") -- snippet completions
+    use ( "hrsh7th/cmp-nvim-lsp")
+    use ( "hrsh7th/cmp-nvim-lua")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -95,7 +96,7 @@ return packer.startup(function(use)
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Git
-	use("lewis6991/gitsigns.nvim")
+	use{"lewis6991/gitsigns.nvim", tag = "release"}
 
     -- Solidity
     use("tomlion/vim-solidity")
