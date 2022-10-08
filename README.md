@@ -36,26 +36,30 @@ _Note: if you want to give these dotfiles a try, you should fork this repo, revi
 
 ![nvim.png](/images/nvim.png)
 
-## Description
+## Pre-requisites
 
-- [`.config`](./.config) - consists of configuration files for Neovim, Alacritty, i3WM, picom, ranger and Redshift.
-- [`.p10k.zsh`](./.p10k.zsh) - Powerlevel10k theme config file for zsh.
-- [`.tmux.conf`](./.tmux.conf) - tmux configuration file.
-- [`.vimrc`](./.vimrc) - vim configuration file.
-- [`.zshrc`](./.zshrc) - zsh configuration file.
-- [`20-intel.conf`](./20-intel.conf) - config file to fix screen-tearing on Arch based systems, to be used with [xf86-video-intel](https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel) driver.
-- [`backup.sh`](./backup.sh) - simple script to make a copy of all the specified dotfiles.
-- [`blurlock`](./blurlock), [`i3exit`](./i3exit) - [Manjaro](https://manjaro.org/)'s lockscreen scripts for i3.
-- [`.scripts`](./.scripts) - custom scripts for easy access, including tmux scripts.
+- [GNU Stow](https://www.gnu.org/software/stow/) to manage dotfiles/configurations.
+- The dotfiles directory should be in **_home_** (for example, ~/dotfiles) to avoid additional flags like `--target`, though it is unavoidable when we have to stow files in a specific directory like **_root_** .
 
 ## Installation
 
-- Copy contents of `.config/` to `~/.config`.
-- Copy `.p10k.zsh`, `.tmux.conf`, `.vimrc` and `.zshrc` to `~/`.
-- Copy `blurlock` and `i3exit` to `/usr/bin`.
-- Copy fonts from `fonts` folder to `/usr/share/fonts` or `~/.local/share/fonts`.
-- Copy contents of `.scripts/` to `~/.scripts`.
-- For `20-intel.conf` refer to this section in the [ArchWiki](https://wiki.archlinux.org/title/intel_graphics#Xorg_configuration).
+Configuration can be done using the following commands,
+
+```
+// default: to stow dotfiles w.r.t the home folder
+$ stow nvim
+
+// to stow dotfiles w.r.t a specific folder, e.g root
+$ stow --target=/ intel-graphics
+```
+
+### Important Notes
+
+- All the folders in the repo **_except_** the `images` folder can be stowed, it has the images for the `README.md` file.
+- Following folders have to be stowed from the **_root_** directory,
+  - `intel-graphics` - config file to fix screen-tearing on Arch based systems, to be used with [xf86-video-intel](https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel) driver. Refer to this section in the [ArchWiki](https://wiki.archlinux.org/title/intel_graphics#Xorg_configuration) for more details.
+  - `fonts` - `/usr/share/fonts` to make fonts available for all users.
+- All the other folders except the ones mentioned above can be stowed from the **_home_** directory.
 
 ## References
 
