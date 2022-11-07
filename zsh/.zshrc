@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -82,7 +84,7 @@ export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 plugins=(
 	evalcache
-	zsh-nvm
+	# zsh-nvm
 	git
 	zsh-completions
 	zsh-syntax-highlighting
@@ -111,7 +113,7 @@ export PATH="$PATH:/usr/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
 # intellij
-export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/IDEA-C"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/apps/IDEA-C/"
 
 # scripts path
 export PATH="$PATH:$HOME/.scripts"
@@ -163,7 +165,7 @@ alias cpf="clear; pfetch"
 # eval "$(direnv hook zsh)"
 _evalcache direnv hook zsh > /dev/null 2>&1
 
-# pfetch
+# pfetch script
 pfetch
 
 # timing zsh start-up time
@@ -175,6 +177,21 @@ timezsh() {
 	now=$(python -c 'from time import time; print(int(round(time() * 1000)))')
 	elapsed=$(($now-$timer))
 	echo "Average ZSH start-up time:" $(($elapsed / $times)) "ms"
+}
+
+# Load all of the plugins that were defined in ~/.zshrc
+timePlugins() {
+    for plugin ($plugins); do
+      timer=$(python -c 'from time import time; print(int(round(time() * 1000)))')
+      if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
+        source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
+      elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
+        source $ZSH/plugins/$plugin/$plugin.plugin.zsh
+      fi
+      now=$(python -c 'from time import time; print(int(round(time() * 1000)))')
+      elapsed=$(($now-$timer))
+      echo $elapsed":" $plugin
+    done
 }
 
 # The next line updates PATH for the Google Cloud SDK.

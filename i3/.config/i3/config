@@ -26,8 +26,8 @@ default_border pixel 3
 default_floating_border pixel 0
 
 # Set inner/outer gaps
-gaps inner 5
-gaps outer 3
+gaps inner 0
+gaps outer 0
 
 # Hide borders
 hide_edge_borders none
@@ -177,7 +177,7 @@ assign [class="Code"] $ws3
 # assign [class="TelegramDesktop"] $ws5
 
 # Open specific applications in floating mode
-# for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 1
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="nitrogen"] floating enable sticky enable border normal
 for_window [title="Add/Remove Software"] floating enable
@@ -261,14 +261,16 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 bindsym $mod+i exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -2.5% #decrease sound volume
 bindsym $mod+o exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +2.5% #increase sound volume
-bindsym $mod+p exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+# bindsym $mod+p exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym $mod+p exec --no-startup-id playerctl play-pause
 
 # Redshift
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 
 # Set wallpaper with feh
-exec_always feh --bg-fill /home/onyx/Pictures/wallhaven-8oz631.jpg
+# exec_always feh --bg-fill /home/onyx/Pictures/wallhaven-8oz631.jpg
+exec_always feh --bg-fill /home/onyx/Pictures/arch_neon.jpg
 
 # Picom autostart with config
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
