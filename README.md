@@ -12,6 +12,12 @@ _Note: if you want to give these dotfiles a try, you should fork this repo, revi
   - [`autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like fast/unobtrusive autosuggestions for zsh.
   - [`syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell-like syntax highlighting for Zsh.
 - [`neovim`](https://neovim.io/) - Hyperextensible Vim-based text editor.
+  - [`lsp-zero`](https://github.com/VonHeikemen/lsp-zero.nvim) - LSP quick start.
+  - [`mason`](https://github.com/williamboman/mason.nvim) - Portable package manager for Neovim.
+  - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - A highly extensible fuzzy finder built with Lua.
+  - [`treesitter`](https://tree-sitter.github.io/tree-sitter/) - Tree-sitter is a parser generator tool and an incremental parsing library, built with Rust.
+  - [`harpoon`](https://github.com/ThePrimeagen/harpoon) - Highly customizable folder/file/terminal navigation utility.
+- [`nvim-from-scratch`](https://neovim.io/) - Neovim config based on Neovim-from-scratch series.
   - [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig) - Quickstart configurations for the Nvim LSP client.
   - [`telescope`](https://github.com/nvim-telescope/telescope.nvim) - A highly extensible fuzzy finder built with Lua.
   - [`treesitter`](https://tree-sitter.github.io/tree-sitter/) - Tree-sitter is a parser generator tool and an incremental parsing library, built with Rust.
@@ -66,3 +72,4 @@ $ stow --target=/ intel-graphics
 - [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [Webpro's dotfiles](https://github.com/webpro/awesome-dotfiles)
 - [Neovim from Scratch by chris@machine](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
+- [Neovim RC From Scratch by ThePrimeagen](https://www.youtube.com/watch?v=w7i4amO_zaE)
