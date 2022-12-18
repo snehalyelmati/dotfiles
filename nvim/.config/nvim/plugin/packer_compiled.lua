@@ -109,10 +109,10 @@ _G.packer_plugins = {
     path = "/home/onyx/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gruvbox-material"] = {
+  ["gruvbox.nvim"] = {
     loaded = true,
-    path = "/home/onyx/.local/share/nvim/site/pack/packer/start/gruvbox-material",
-    url = "https://github.com/sainnhe/gruvbox-material"
+    path = "/home/onyx/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   harpoon = {
     loaded = true,

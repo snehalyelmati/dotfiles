@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# set session name
+SESSION="learn-rust"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $HOME/Documents/learn_rust/
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "rust"
+
+	# open vim in a new window
+	tmux neww -a -t $SESSION -n "vim-rust" -c $HOME/Documents/learn_rust/ "nvim ."
+
+	# switch to the first window
+	tmux switch -t $SESSION:"rust"
+fi

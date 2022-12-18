@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# set session name
+SESSION="dotfiles"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $HOME/linux-dotfiles
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "zsh"
+
+	# open vim in a new windows
+	tmux neww -a -t $SESSION -n "vim-i3" -c $HOME/linux-dotfiles/i3/.config/i3/ "nvim ."
+	tmux neww -a -t $SESSION -n "vim-nvim" -c $HOME/linux-dotfiles/nvim/.config/nvim/ "nvim ."
+	tmux neww -a -t $SESSION -n "vim-alacritty" -c $HOME/linux-dotfiles/alacritty/.config/alacritty/ "nvim ."
+	tmux neww -a -t $SESSION -n "vim-tmux" -c $HOME/linux-dotfiles/tmux "nvim ."
+
+	# switch to the first window
+	tmux switch -t $SESSION:"zsh"
+fi

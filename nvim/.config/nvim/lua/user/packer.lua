@@ -42,8 +42,8 @@ return require('packer').startup(function(use)
 	})
 
 	-- Appearance and themes
-	-- use("ellisonleao/gruvbox.nvim")
-	use("sainnhe/gruvbox-material")
+	use("ellisonleao/gruvbox.nvim")
+	-- use("sainnhe/gruvbox-material")
 	use({
 		'rose-pine/neovim',
 		as = 'rose-pine',

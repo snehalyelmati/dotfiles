@@ -41,8 +41,8 @@ smart_borders on
 
 # autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id pamac-tray
-exec --no-startup-id birdtray
+# exec --no-startup-id pamac-tray
+# exec --no-startup-id birdtray
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -73,9 +73,9 @@ bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec firefox -private-window
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec thunar
-bindsym $mod+F8 exec pamac-manager
+bindsym $mod+F8 exec pavucontrol
 bindsym $mod+F9 exec blueman-manager
-bindsym $mod+F10 exec pavucontrol
+bindsym $mod+F10 exec spotify
 bindsym $mod+F11 exec telegram-desktop
 bindsym $mod+F12 exec alacritty --title btop -e btop --utf-force
 
@@ -270,7 +270,7 @@ exec --no-startup-id redshift-gtk
 
 # Set wallpaper with feh
 # exec_always feh --bg-fill /home/onyx/Pictures/wallhaven-8oz631.jpg
-exec_always feh --bg-fill /home/onyx/Pictures/arch_neon.jpg
+exec_always feh --bg-fill /home/onyx/Pictures/wallhaven-8oz631.jpg
 
 # Picom autostart with config
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
@@ -327,5 +327,8 @@ bar {
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec "dmenu_run -nf '#E8E9EB' -nb '#222222' -sb '#E0DFD5' -sf '#222222' -fn 'JetbrainsMono-10' -p 'dmenu prompt >'"
+# bindsym $mod+d exec "dmenu_run -nf '#E8E9EB' -nb '#222222' -sb '#E0DFD5' -sf '#222222' -fn 'JetbrainsMono-10' -p 'dmenu prompt >'"
+
+# start rofi
+bindsym $mod+d exec "rofi -show drun"
 
