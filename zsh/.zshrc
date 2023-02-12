@@ -125,6 +125,7 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export EDITOR='nvim'
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -200,3 +201,7 @@ if [ -f '/home/onyx/google-cloud-sdk/path.zsh.inc' ]; then . '/home/onyx/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/onyx/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/onyx/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
