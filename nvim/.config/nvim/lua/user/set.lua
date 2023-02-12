@@ -27,3 +27,5 @@ vim.g.mapleader = " "
 
 vim.g.transparent_enabled = true
 vim.g.gruvbox_contrast_dark = "hard"
+
+vim.opt.signcolumn = "yes"

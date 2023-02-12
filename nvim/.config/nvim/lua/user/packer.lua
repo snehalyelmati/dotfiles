@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
 	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
+	use('lervag/vimtex')
+	use('steelsojka/pears.nvim')
+	use('norcalli/nvim-colorizer.lua')
 
 	-- LSP
 	use({
