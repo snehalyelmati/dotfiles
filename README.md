@@ -38,6 +38,10 @@ _Note: if you want to give these dotfiles a try, you should fork this repo, revi
 
 ## Screenshots
 
+![btop.png](./images/btop.png)
+
+![i3.png](./images/i3.png)
+
 ![tmux.png](./images/tmux.png)
 
 ![nvim.png](/images/nvim.png)
