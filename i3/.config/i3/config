@@ -26,7 +26,7 @@ default_border pixel 3
 default_floating_border pixel 0
 
 # Set inner/outer gaps
-gaps inner 0
+gaps inner 8
 gaps outer 0
 
 # Hide borders
@@ -177,7 +177,7 @@ assign [class="Code"] $ws3
 # assign [class="TelegramDesktop"] $ws5
 
 # Open specific applications in floating mode
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="nitrogen"] floating enable sticky enable border normal
 for_window [title="Add/Remove Software"] floating enable
@@ -269,8 +269,8 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 
 # Set wallpaper with feh
-# exec_always feh --bg-fill /home/onyx/Pictures/wallhaven-8oz631.jpg
 exec_always feh --bg-fill /home/onyx/Pictures/wallhaven-8oz631.jpg
+# exec_always feh --bg-fill /home/onyx/Pictures/arch_neon.jpg
 
 # Picom autostart with config
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
@@ -314,7 +314,7 @@ bar {
 
 		focused_workspace  #E0DFD5 #E0DFD5 #222222
 		active_workspace   #333333 #222222 #E0DFD5
-		inactive_workspace #333333 #222222 #E0DFD5
+		inactive_workspace #222222 #222222 #E0DFD5
 		urgent_workspace   #2F343A #F06543 #222222
 		binding_mode       #2F343A #F4A261 #222222
   	}
@@ -331,4 +331,3 @@ bar {
 
 # start rofi
 bindsym $mod+d exec "rofi -show drun"
-
