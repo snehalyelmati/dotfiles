@@ -124,6 +124,9 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# For true color in tmux
+export TERM='xterm-256color'
+
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
 # if [[ -n $SSH_CONNECTION ]]; then
