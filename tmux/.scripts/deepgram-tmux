@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# set session name
+SESSION="deepgram"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $HOME/Documents/deepgram-voicebot-backend/
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "zsh"
+
+	# open vim in a new windows
+	# tmux neww -a -t $SESSION -n "vim-main" -c $HOME/Documents/deepgram-voicebot-backend/ "source venv/bin/activate; nvim ."
+	tmux neww -a -t $SESSION -n "flask-server" -c $HOME/Documents/deepgram-voicebot-backend/ "source venv/bin/activate; python main.py"
+
+	# switch to the first window
+	tmux switch -t $SESSION:"zsh"
+fi
