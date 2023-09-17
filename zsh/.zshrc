@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 
 # go path
 export GO_PATH=~/go
-export GOOS=linux
+export GOOS=darwin
 export GO_PERSONAL=~/go/src/github.com/snehalyelmati
 export PATH=$PATH:/$GO_PATH/bin
 
