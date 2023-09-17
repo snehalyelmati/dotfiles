@@ -119,8 +119,8 @@ font:
     # family: "CascadiaMono"
 
     # The `style` can be specified to pick a specific face.
-    # style: Regular
-    style: Medium
+    style: Regular
+    # style: Medium
 
   # Bold font face
   #bold:
@@ -156,7 +156,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 16.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -186,8 +186,9 @@ font:
 colors:
   primary:
     # hard contrast background - '#1d2021'
-    background:        &gruvbox_dark_bg '#282828'
+    # hard contrast background - '#282828'
     # soft contrast background - '#32302f'
+    background:        &gruvbox_dark_bg '#1d2020'
     foreground:        '#ebdbb2'
     bright_foreground: '#fbf1c7'
     dim_foreground:    '#a89984'
