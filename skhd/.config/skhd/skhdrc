@@ -37,6 +37,10 @@ ctrl + cmd - 7 : yabai -m window --space 7
 ctrl + cmd - 8 : yabai -m window --space 8
 ctrl + cmd - 9 : yabai -m window --space 9
 
+# app shortcuts
+cmd - return : open -a /Applications/Alacritty.app
+cmd - f1 : open -n -a /Applications/Firefox.app/
+
 # start/stop yabai - NOT_WORKING
 # shift + alt - q : brew services stop yabai
 # shift + alt - s : brew services start yabai
