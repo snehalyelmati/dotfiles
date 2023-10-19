@@ -7,8 +7,8 @@ cmd - h : yabai -m window --focus west
 cmd - l : yabai -m window --focus east
 
 # changing focus between external displays
-# alt - s : yabai -m display --focus west
-# alt - g : yabai -m display --focus east
+# shift + cmd - ` : yabai -m display --focus first
+# shift + cmd - k : yabai -m display --focus east
 
 # modifying window size
 shift + cmd - m : yabai -m window --toggle zoom-fullscreen
@@ -26,7 +26,19 @@ shift + cmd - k : yabai -m window --warp north
 shift + cmd - h : yabai -m window --warp west
 shift + cmd - l : yabai -m window --warp east
 
-# move displays between external displays
+# move focus across external displays
+# alt - h : yabai -m display --focus west
+alt - j : yabai -m display --focus south
+alt - k : yabai -m display --focus north
+# alt - l : yabai -m display --focus east
+
+# move windows across external displays
+# alt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
+alt + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
+alt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
+# alt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
+
+# move windows across workspaces
 ctrl + cmd - 1 : yabai -m window --space 1
 ctrl + cmd - 2 : yabai -m window --space 2
 ctrl + cmd - 3 : yabai -m window --space 3
@@ -36,9 +48,10 @@ ctrl + cmd - 6 : yabai -m window --space 6
 ctrl + cmd - 7 : yabai -m window --space 7
 ctrl + cmd - 8 : yabai -m window --space 8
 ctrl + cmd - 9 : yabai -m window --space 9
+ctrl + cmd - 0 : yabai -m window --space 10
 
 # app shortcuts
-cmd - return : open -a /Applications/Alacritty.app
+cmd - return : open -n -a /Applications/Alacritty.app
 cmd - f1 : open -n -a /Applications/Firefox.app/
 
 # start/stop yabai - NOT_WORKING
