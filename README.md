@@ -1,8 +1,8 @@
 # dotfiles
 
-My Linux dotfiles, I use [Arch](https://archlinux.org/) btw.
+Dotfiles for MacOS and Arch Linux.
 
-_Note: if you want to give these dotfiles a try, you should fork this repo, review the code and remove things you don't want or need. Use at your own risk._
+_Note: If you want to give these dotfiles a try, you should fork this repo, review the code and remove things you don't want or need._
 
 - [`i3WM`](https://github.com/i3/i3) - A tiling window manager for X11.
 - [`tmux`](https://github.com/tmux/tmux) - A terminal multiplexer, runs on OpenBSD, FreeBSD, NetBSD, Linux, macOS and Solaris.
@@ -35,8 +35,10 @@ _Note: if you want to give these dotfiles a try, you should fork this repo, revi
 - [`picom`](https://github.com/yshui/picom/tree/next) - A standalone compositor for X11.
 - [`redshift`](https://github.com/jonls/redshift) - Redshift adjusts the color temperature of your screen according to your surroundings.
 - [`pfetch`](https://github.com/dylanaraps/pfetch) - A minimal system information tool written in POSIX sh.
+- [`yabai`](https://github.com/koekeishiya/yabai) - A tiling window manager for MacOS based on binary space partitioning.
+- [`skhd`](https://github.com/koekeishiya/skhd) - Simple hotkey daemon for MacOS.
 
-## Screenshots
+## Screenshots - Linux
 
 ![btop.png](./images/btop.png)
 
