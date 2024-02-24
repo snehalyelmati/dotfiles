@@ -20,6 +20,10 @@ shift + cmd + ctrl - k : yabai -m window --swap north
 shift + cmd + ctrl - h : yabai -m window --swap west
 shift + cmd + ctrl - l : yabai -m window --swap east
 
+# resize windows
+shift + alt - o : yabai -m window --resize right:100:0
+shift + alt - i : yabai -m window --resize right:-100:0
+
 # move windows
 shift + cmd - j : yabai -m window --warp south
 shift + cmd - k : yabai -m window --warp north
@@ -51,7 +55,7 @@ ctrl + cmd - 9 : yabai -m window --space 9
 ctrl + cmd - 0 : yabai -m window --space 10
 
 # app shortcuts
-cmd - return : open -n -a /Applications/Alacritty.app
+# cmd - return : open -n -a /Applications/Alacritty.app
 cmd - f1 : open -n -a /Applications/Firefox.app/
 
 # start/stop yabai - NOT_WORKING
