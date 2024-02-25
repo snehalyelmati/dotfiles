@@ -4,10 +4,11 @@ yabai -m config window_placement second_child
 
 
 # padding
-yabai -m config top_padding 0
-yabai -m config bottom_padding 0
-yabai -m config left_padding 0
-yabai -m config right_padding 0
+yabai -m config top_padding 7
+yabai -m config bottom_padding 7
+yabai -m config left_padding 7
+yabai -m config right_padding 7
+yabai -m config window_gap 7
 
 
 # mouse settings
@@ -23,3 +24,4 @@ yabai -m mouse_drop_action swap
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Transmission$" manage=off
