@@ -38,7 +38,7 @@ start-at-login = true
     alt-minus = 'split horizontal'
     alt-equal = 'split vertical'
 
-    alt-f = 'fullscreen'
+    alt-shift-f = 'fullscreen'
 
     alt-s = 'layout v_accordion' # 'layout stacking' in i3
     alt-w = 'layout h_accordion' # 'layout tabbed' in i3
