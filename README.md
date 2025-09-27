@@ -56,6 +56,11 @@ _Note: If you want to give these dotfiles a try, you should fork this repo, revi
 
 ### macOS-Specific Tools
 
+- [`iTerm2`](https://iterm2.com/) - Feature-rich terminal emulator with advanced customization
+  - **Font**: JetBrainsMono Nerd Font SemiBold 17pt with 1.19x vertical spacing for enhanced readability
+  - **Visual Features**: Custom color scheme, blur effects (~20px radius), unlimited scrollback
+  - **Terminal Type**: xterm-256color, Option-as-Esc for both keys, smart cursor behavior
+  - **Ergonomics**: Increased line spacing, inspiration from Zed.
 - [`yabai`](https://github.com/koekeishiya/yabai) - Tiling window manager based on binary space partitioning
   - **Layout**: BSP (Binary Space Partitioning) with no padding/gaps
   - **Configuration**: Mouse follows focus disabled, Alt modifier for mouse actions
@@ -159,6 +164,7 @@ stow ranger          # File manager
 
 **macOS-Specific Configurations:**
 ```bash
+stow iterm2          # Terminal emulator configuration
 stow yabai           # Tiling window manager
 stow skhd            # Hotkey daemon
 stow aerospace       # Alternative window manager
@@ -196,6 +202,15 @@ sudo stow --target=/ fonts-config    # Font configuration
 ## Additional Configuration
 
 ### Post-Installation Setup
+
+**iTerm2 (macOS):**
+```bash
+# Import the configuration profile
+# 1. Open iTerm2 → Preferences → Profiles
+# 2. Click "Other Actions..." → Import JSON Profiles
+# 3. Select: iterm2/iterm2_config.json
+# 4. Set as default profile if desired
+```
 
 **Neovim:**
 ```bash
@@ -245,6 +260,9 @@ exec zsh
 
 ### Customization Tips
 
+- **Terminal Choice (macOS)**:
+  - **Alacritty**: Lightweight, Gruvbox theme, consistent across platforms
+  - **iTerm2**: Feature-rich, custom color scheme, ergonomic spacing (1.19x), blur effects
 - **Tmux Scripts**: Project-specific session scripts are available in `tmux/.scripts/`
   - Example: `dotfiles-tmux` creates windows for yabai, skhd, nvim, alacritty, and tmux configs
   - Scripts follow pattern: `<project>-tmux` with predefined window layouts

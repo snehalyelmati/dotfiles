@@ -52,6 +52,7 @@ stow zsh
 stow alacritty
 
 # macOS-specific configurations
+stow iterm2
 stow yabai
 stow skhd
 stow aerospace
@@ -138,7 +139,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 This repository supports both macOS and Arch Linux with platform-specific configurations:
 - **Cross-platform**: neovim, tmux, zsh, alacritty, ranger, vim
-- **macOS-specific**: yabai, skhd, aerospace, rectangle
+- **macOS-specific**: iterm2, yabai, skhd, aerospace, rectangle
 - **Linux-specific**: i3, polybar, rofi, picom, redshift
 - **System-wide**: fonts, intel-graphics (Linux only)
 
