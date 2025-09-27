@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# set session name
+SESSION="onyx-studio"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $HOME/Documents/studio-ui-streamlit/
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "zsh-streamlit"
+
+	# open vim in a new windows
+	tmux neww -a -t $SESSION -n "zsh-middleware" -c $HOME/Documents/studio-middleware-service/
+	tmux neww -a -t $SESSION -n "zsh-llm" -c $HOME/Documents/studio-llm-service/
+	tmux neww -a -t $SESSION -n "streamlit-server" -c $HOME/Documents/studio-ui-streamlit/
+	tmux neww -a -t $SESSION -n "middleware-server" -c $HOME/Documents/studio-middleware-service/
+	tmux neww -a -t $SESSION -n "llm-server" -c $HOME/Documents/studio-llm-service/
+
+	# switch to the first window
+	tmux switch -t $SESSION:"zsh-streamlit"
+fi

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# set session name
+SESSION="agent"
+
+SESSIONEXISTS=$(tmux ls | grep $SESSION)
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session with the session name
+	tmux new -d -s $SESSION -c $HOME/Documents/agent-onyx/
+
+	# rename the first window
+	tmux rename-window -t $SESSION:1 "zsh"
+
+	# open vim in a new windows
+	tmux neww -a -t $SESSION -n "jupyter-server" -c $HOME/Documents/morpher/
+	tmux neww -a -t $SESSION -n "ollama-server" -c $HOME/Documents/morpher/
+
+	# switch to the first window
+	tmux switch -t $SESSION:"zsh"
+fi

@@ -1,3 +1,6 @@
+set +x
+clear
+
 # zmodload zsh/zprof
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -11,7 +14,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/onyx/.oh-my-zsh"
+export ZSH="/Users/snehalyelmati/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -101,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 
 # go path
 export GO_PATH=~/go
-export GOOS=linux
+export GOOS=darwin
 export GO_PERSONAL=~/go/src/github.com/snehalyelmati
 export PATH=$PATH:/$GO_PATH/bin
 
@@ -120,6 +123,9 @@ export PATH="$PATH:$HOME/.scripts"
 
 # dotnet
 export PATH="$PATH:$HOME/.dotnet/tools"
+
+# Python
+export PATH="$PATH:$HOME/Library/Python/3.9/bin/"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -152,19 +158,20 @@ alias i3config="nvim ~/.config/i3/config"
 alias gdiff="git difftool"
 alias tmux="tmux -u"
 alias c="clear"
-alias ct="clear; tree"
+alias ct="clear; tree -I '__pycache__|tmp'"
 alias cpf="clear; pfetch"
 alias vim="nvim"
+alias python="python3"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # kubectl auto-completion
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+# [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # direnv hook for zsh
 # eval "$(direnv hook zsh)"
@@ -208,3 +215,6 @@ if [ -f '/home/onyx/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/onyx/g
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
+
+# UV autocomplete
+eval "$(uv generate-shell-completion zsh)"
