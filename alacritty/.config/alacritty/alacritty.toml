@@ -61,12 +61,12 @@ args = ["--login"]
 program = "/bin/zsh"
 
 [window]
-decorations = "buttonless"
+decorations = "Buttonless"
 opacity = 1.0
 option_as_alt = "Both"
 
 [window.padding]
 x = 10
-y = 10
+y = 0
 
 [terminal]
