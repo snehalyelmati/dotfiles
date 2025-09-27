@@ -1,3 +1,6 @@
+set +x
+clear
+
 # zmodload zsh/zprof
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -155,7 +158,7 @@ alias i3config="nvim ~/.config/i3/config"
 alias gdiff="git difftool"
 alias tmux="tmux -u"
 alias c="clear"
-alias ct="clear; tree"
+alias ct="clear; tree -I '__pycache__|tmp'"
 alias cpf="clear; pfetch"
 alias vim="nvim"
 alias python="python3"
@@ -163,9 +166,9 @@ alias python="python3"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # kubectl auto-completion
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
@@ -212,3 +215,6 @@ if [ -f '/home/onyx/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/onyx/g
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
+
+# UV autocomplete
+eval "$(uv generate-shell-completion zsh)"
