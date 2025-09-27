@@ -45,16 +45,28 @@ The repository contains modular configuration directories, each representing a s
 All configurations are managed using GNU Stow. The repository should be located in the home directory (`~/dotfiles` or similar).
 
 ```bash
-# Install configuration for home directory
+# Essential development environment (all platforms)
 stow nvim-kickstart
 stow tmux
 stow zsh
+stow alacritty
+
+# macOS-specific configurations
 stow yabai
 stow skhd
+stow aerospace
+stow rectangle
+
+# Linux-specific configurations
+stow i3
+stow polybar
+stow rofi
+stow picom
+stow redshift
 
 # Install system-wide configurations (requires root)
 sudo stow --target=/ fonts
-sudo stow --target=/ intel-graphics
+sudo stow --target=/ intel-graphics  # Linux only
 ```
 
 ### Key Development Environment Setup
@@ -69,10 +81,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-## Branch Strategy
-
-- `vanilla-arch` - Main branch for Arch Linux configurations
-- `osx` - Current branch with macOS-specific configurations
 
 ## Key Configuration Features
 
@@ -126,13 +134,15 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 - Editor: Neovim set as default (`EDITOR='nvim'`)
 - Terminal: 256-color support configured
 
-## Cross-Platform Considerations
+## Cross-Platform Usage
 
-This repository supports both macOS and Arch Linux:
-- Use appropriate stow commands based on the target system
-- macOS-specific: yabai, skhd, aerospace, rectangle
-- Linux-specific: i3, polybar, rofi, picom, redshift
-- Shared: neovim, tmux, zsh, alacritty, ranger
+This repository supports both macOS and Arch Linux with platform-specific configurations:
+- **Cross-platform**: neovim, tmux, zsh, alacritty, ranger, vim
+- **macOS-specific**: yabai, skhd, aerospace, rectangle
+- **Linux-specific**: i3, polybar, rofi, picom, redshift
+- **System-wide**: fonts, intel-graphics (Linux only)
+
+Users install only the configurations relevant to their platform using selective stow commands.
 
 ## Notes
 

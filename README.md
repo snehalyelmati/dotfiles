@@ -4,11 +4,6 @@ Cross-platform dotfiles for macOS and Arch Linux systems, managed with [GNU Stow
 
 _Note: If you want to give these dotfiles a try, you should fork this repo, review the code and remove things you don't want or need._
 
-## Branch Strategy
-
-- `vanilla-arch` - Main branch optimized for Arch Linux
-- `osx` - Current branch with macOS-specific configurations
-
 ## Tools & Configurations
 
 ### Cross-Platform Tools
@@ -148,38 +143,35 @@ Clone this repository to your home directory:
 cd ~
 git clone https://github.com/your-username/linux-dotfiles.git dotfiles
 cd dotfiles
-
-# Switch to appropriate branch
-git checkout osx      # for macOS
-git checkout vanilla-arch  # for Arch Linux
 ```
 
 ### Install Configurations
 
-**Home Directory Configurations:**
+**Essential Development Environment (All Platforms):**
 ```bash
-# Essential development environment
 stow nvim-kickstart   # Current Neovim configuration
 stow tmux            # Terminal multiplexer
 stow zsh             # Shell configuration
 stow alacritty       # Terminal emulator
+stow vim             # Legacy Vim configuration
+stow ranger          # File manager
+```
 
-# Platform-specific (macOS)
-stow yabai           # Window manager
+**macOS-Specific Configurations:**
+```bash
+stow yabai           # Tiling window manager
 stow skhd            # Hotkey daemon
 stow aerospace       # Alternative window manager
 stow rectangle       # Window management utility
+```
 
-# Platform-specific (Linux)
-stow i3              # Window manager
+**Linux-Specific Configurations:**
+```bash
+stow i3              # Tiling window manager
 stow polybar         # Status bar
 stow rofi            # Application launcher
 stow picom           # Compositor
 stow redshift        # Blue light filter
-
-# Additional tools
-stow vim             # Legacy Vim configuration
-stow ranger          # File manager
 ```
 
 **System-Wide Configurations (requires sudo):**
