@@ -53,8 +53,18 @@ blinking = "On"
 size = 18.0
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
-style = "Regular"
+family = "Iosevka Term"
+style = "Medium Extended"
+# family = "JetBrainsMono Nerd Font"
+# style = "SemiBold"
+
+[font.offset]
+x = 0
+y = 8
+
+[font.glyph_offset]
+x = 0
+y = 4
 
 [terminal.shell]
 args = ["--login"]
