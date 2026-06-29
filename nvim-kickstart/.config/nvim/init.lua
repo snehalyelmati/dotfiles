@@ -933,12 +933,12 @@ require('lazy').setup({
   },
 
   {
-    name = 'lunaperche-colorscheme',
-    dir = vim.fn.stdpath 'config',
+    'webhooked/kanso.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'lunaperche'
+      require('kanso').setup {}
+      vim.cmd.colorscheme 'kanso-zen'
     end,
   },
 

@@ -1,42 +1,42 @@
 [colors.bright]
-black = "#928374"
-blue = "#83a598"
-cyan = "#8ec07c"
-green = "#b8bb26"
-magenta = "#d3869b"
-red = "#fb4934"
-white = "#ebdbb2"
-yellow = "#fabd2f"
+black = "#717C7C"
+blue = "#8BA4B0"
+cyan = "#7AA89F"
+green = "#87A987"
+magenta = "#A292A3"
+red = "#E46876"
+white = "#F2F1EF"
+yellow = "#E6C384"
 
 [colors.cursor]
 cursor = "CellForeground"
 text = "CellBackground"
 
 [colors.dim]
-black = "#32302f"
-blue = "#076678"
-cyan = "#427b58"
-green = "#79740e"
-magenta = "#8f3f71"
-red = "#9d0006"
-white = "#928374"
-yellow = "#b57614"
+black = "#090E13"
+blue = "#658594"
+cyan = "#6A9589"
+green = "#8A9A7B"
+magenta = "#8992A7"
+red = "#C34043"
+white = "#909398"
+yellow = "#C4B28A"
 
 [colors.normal]
-black = "#1d2020"
-blue = "#458588"
-cyan = "#689d6a"
-green = "#98971a"
-magenta = "#b16286"
-red = "#cc241d"
-white = "#a89984"
-yellow = "#d79921"
+black = "#1C1E25"
+blue = "#7FB4CA"
+cyan = "#8EA4A2"
+green = "#98BB6C"
+magenta = "#938AA9"
+red = "#C34043"
+white = "#C5C9C7"
+yellow = "#DCA561"
 
 [colors.primary]
-background = "#1d2020"
-bright_foreground = "#fbf1c7"
-dim_foreground = "#a89984"
-foreground = "#ebdbb2"
+background = "#090E13"
+bright_foreground = "#F2F1EF"
+dim_foreground = "#909398"
+foreground = "#C5C9C7"
 
 [colors.selection]
 background = "CellForeground"
@@ -50,11 +50,12 @@ text = "CellBackground"
 blinking = "On"
 
 [font]
-size = 18.0
+size = 17.0
 
 [font.normal]
 family = "Iosevka Term"
-style = "Medium Extended"
+style = "Medium"
+# style = "Medium Extended"
 # family = "JetBrainsMono Nerd Font"
 # style = "SemiBold"
 
