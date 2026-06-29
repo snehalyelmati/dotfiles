@@ -273,6 +273,12 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
+  -- Maintenance checklist:
+  -- 1. Update plugins with `:Lazy sync`, then commit lazy-lock.json so plugin commits stay pinned.
+  -- 2. Update pinned Mason tool versions below, then run `:MasonToolsInstallSync`.
+  -- 3. After Treesitter changes, run `:Lazy sync nvim-treesitter` and verify parsers with `:checkhealth nvim-treesitter`.
+  -- 4. Before calling the config good, run `:checkhealth vim.lsp mason lazy nvim-treesitter` and open a real buffer.
+
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
@@ -705,10 +711,13 @@ require('lazy').setup({
                 useLibraryCodeForTypes = true,
                 typeCheckingMode = 'basic',
                 diagnosticMode = 'workspace',
-                autoSearchPath = true,
+                autoSearchPaths = true,
                 inlayHints = {
                   callArgumentNames = true,
                 },
+                reportUnknownVariableType = 'none',
+                reportUnknownParameterType = 'none',
+                reportMissingTypeStubs = 'none',
               },
             },
           },
@@ -723,6 +732,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        ruff = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -740,7 +750,14 @@ require('lazy').setup({
         },
       }
 
-      -- Ensure the servers and tools above are installed
+      for server_name, server in pairs(servers) do
+        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+        vim.lsp.config(server_name, server)
+      end
+
+      -- Ensure the servers and tools above are installed.
+      -- Versioned Mason packages keep command-line tools reproducible, while
+      -- lazy-lock.json pins Neovim plugin commits.
       --
       -- To check the current status of installed tools and/or manually install
       -- other tools, you can run
@@ -753,27 +770,19 @@ require('lazy').setup({
       --
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
-        'basedpyright', -- Python LSP
-        'ruff', -- Python Formatter and Linter
-      })
-      require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      require('mason-tool-installer').setup {
+        ensure_installed = {
+          { 'basedpyright', version = '1.39.9' },
+          { 'lua-language-server', version = '3.18.2' },
+          { 'ruff', version = '0.15.20' },
+          { 'stylua', version = 'v2.5.2' },
+          { 'tree-sitter-cli', version = 'v0.26.9' },
+        },
+      }
 
       require('mason-lspconfig').setup {
-        ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_installation = false,
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for ts_ls)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
+        ensure_installed = {},
+        automatic_enable = vim.tbl_keys(servers or {}),
       }
     end,
   },
@@ -923,27 +932,15 @@ require('lazy').setup({
     },
   },
 
-  -- { -- You can easily change to a different colorscheme.
-  --   -- Change the name of the colorscheme plugin below, and then
-  --   -- change the command in the config to whatever the name of that colorscheme is.
-  --   --
-  --   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  --   'folke/tokyonight.nvim',
-  --   priority = 1000, -- Make sure to load this before all the other start plugins.
-  --   config = function()
-  --     ---@diagnostic disable-next-line: missing-fields
-  --     require('tokyonight').setup {
-  --       styles = {
-  --         comments = { italic = false }, -- Disable italics in comments
-  --       },
-  --     }
-  --
-  --     -- Load the colorscheme here.
-  --     -- Like many other themes, this one has different styles, and you could load
-  --     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  --     vim.cmd.colorscheme 'tokyonight-storm'
-  --   end,
-  -- },
+  {
+    name = 'lunaperche-colorscheme',
+    dir = vim.fn.stdpath 'config',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'lunaperche'
+    end,
+  },
 
   -- {
   --   'wtfox/jellybeans.nvim',
@@ -1009,22 +1006,25 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-    opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = {
-        enable = true,
-        -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-        --  If you are experiencing weird indenting issues, add the language to
-        --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
-      },
-      indent = { enable = true, disable = { 'ruby' } },
-    },
+    branch = 'main',
+    lazy = false,
+    build = function()
+      require('nvim-treesitter').install({ 'bash', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }):wait(300000)
+    end,
+    config = function()
+      local parsers = { 'bash', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+      if vim.fn.executable 'tree-sitter' == 1 then
+        require('nvim-treesitter').install(parsers)
+      end
+
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = parsers,
+        callback = function()
+          pcall(vim.treesitter.start)
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
+    end,
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
     --
