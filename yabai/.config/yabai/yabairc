@@ -27,3 +27,6 @@ yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Transmission$" manage=off
 yabai -m rule --add app="^Stickies$" manage=off
 yabai -m rule --add app="^Toggl Track$" manage=off
+yabai -m rule --add app="^Playwright$" manage=off
+yabai -m rule --add app="^Google Chrome$" manage=off
+yabai -m rule --add app="^Chromium$" manage=off

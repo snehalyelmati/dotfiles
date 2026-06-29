@@ -218,3 +218,22 @@ if [ -f '/home/onyx/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/onyx/g
 
 # UV autocomplete
 eval "$(uv generate-shell-completion zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/snehalyelmati/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun
+export PATH="/Users/snehalyelmati/.bun/bin:$PATH"
+
+# bun completions
+[ -s "/Users/snehalyelmati/.bun/_bun" ] && source "/Users/snehalyelmati/.bun/_bun"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/snehalyelmati/.lmstudio/bin"
+# End of LM Studio CLI section
+
