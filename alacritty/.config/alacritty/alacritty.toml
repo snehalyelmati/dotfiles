@@ -29,14 +29,14 @@ cyan = "#8EA4A2"
 green = "#98BB6C"
 magenta = "#938AA9"
 red = "#C34043"
-white = "#C5C9C7"
+white = "#DCD7BA"
 yellow = "#DCA561"
 
 [colors.primary]
 background = "#090E13"
 bright_foreground = "#F2F1EF"
-dim_foreground = "#909398"
-foreground = "#C5C9C7"
+dim_foreground = "#A4A7A4"
+foreground = "#DCD7BA"
 
 [colors.selection]
 background = "CellForeground"
