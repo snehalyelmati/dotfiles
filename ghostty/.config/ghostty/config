@@ -1,0 +1,22 @@
+# Colors
+# background = 1e1e2e
+# foreground = cdd6f4
+
+# Font
+font-family = Iosevka Term
+font-style = Semibold
+font-size = 18
+
+# Theme (built‑in or custom)
+# theme = tokyo-night
+# theme = Catppuccin Frappe
+# theme = Nord
+# theme = Tomorrow Night
+
+# Shell integration (auto‑detect zsh/bash/fish)
+shell-integration = detect
+
+# Keybinds
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_tab
+keybind = ctrl+shift+e=new_split:right
