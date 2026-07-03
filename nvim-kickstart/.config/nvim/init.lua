@@ -937,8 +937,17 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-      require('kanso').setup { foreground = 'saturated' }
-      vim.cmd.colorscheme 'kanso-zen'
+      require('kanso').setup {
+        foreground = 'saturated',
+        overrides = function(colors)
+          return {
+            Normal = { fg = colors.palette.fg2, bg = colors.theme.ui.bg },
+            Comment = { fg = colors.palette.gray2, italic = false },
+            LineNr = { fg = colors.palette.gray2 },
+          }
+        end,
+      }
+      vim.cmd.colorscheme 'kanso-ink'
     end,
   },
 

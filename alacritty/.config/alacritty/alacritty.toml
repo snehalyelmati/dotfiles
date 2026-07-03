@@ -1,5 +1,5 @@
 [colors.bright]
-black = "#717C7C"
+black = "#A4A7A4"
 blue = "#8BA4B0"
 cyan = "#7AA89F"
 green = "#87A987"
@@ -19,7 +19,7 @@ cyan = "#6A9589"
 green = "#8A9A7B"
 magenta = "#8992A7"
 red = "#C34043"
-white = "#909398"
+white = "#C5C9C7"
 yellow = "#C4B28A"
 
 [colors.normal]
@@ -29,14 +29,14 @@ cyan = "#8EA4A2"
 green = "#98BB6C"
 magenta = "#938AA9"
 red = "#C34043"
-white = "#DCD7BA"
+white = "#F2F1EF"
 yellow = "#DCA561"
 
 [colors.primary]
 background = "#090E13"
 bright_foreground = "#F2F1EF"
-dim_foreground = "#A4A7A4"
-foreground = "#DCD7BA"
+dim_foreground = "#C5C9C7"
+foreground = "#F2F1EF"
 
 [colors.selection]
 background = "CellForeground"
