@@ -87,14 +87,12 @@ export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 plugins=(
 	evalcache
-	# zsh-nvm
+	zsh-nvm
 	git
 	zsh-completions
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )
-
-autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -167,8 +165,6 @@ alias python="python3"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # kubectl auto-completion
 # [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
@@ -178,7 +174,7 @@ export NVM_DIR="$HOME/.nvm"
 _evalcache direnv hook zsh > /dev/null 2>&1
 
 # pfetch script
-pfetch
+# pfetch
 
 # timing zsh start-up time
 timezsh() {
@@ -217,7 +213,7 @@ if [ -f '/home/onyx/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/onyx/g
 # source <(ng completion script)
 
 # UV autocomplete
-eval "$(uv generate-shell-completion zsh)"
+_evalcache uv generate-shell-completion zsh
 
 # pnpm
 export PNPM_HOME="/Users/snehalyelmati/Library/pnpm"
@@ -231,7 +227,7 @@ esac
 export PATH="/Users/snehalyelmati/.bun/bin:$PATH"
 
 # bun completions
-[ -s "/Users/snehalyelmati/.bun/_bun" ] && source "/Users/snehalyelmati/.bun/_bun"
+# [ -s "/Users/snehalyelmati/.bun/_bun" ] && source "/Users/snehalyelmati/.bun/_bun"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/snehalyelmati/.lmstudio/bin"
