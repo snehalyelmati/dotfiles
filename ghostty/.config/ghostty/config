@@ -3,6 +3,7 @@ font-style = Semibold
 font-size = 18
 
 theme = Kanagawa Dragon
+macos-titlebar-style = hidden
 macos-option-as-alt = true
 shell-integration = detect
 
