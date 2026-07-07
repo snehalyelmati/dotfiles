@@ -2,7 +2,18 @@ font-family = Iosevka Term
 font-style = Semibold
 font-size = 18
 
-theme = Kanagawa Dragon
+# theme = Kanagawa Dragon
+# theme = Mellifluous
+# theme = Modus Vivendi
+# theme = Monokai Pro Machine
+# theme = Nvim Dark
+# theme = Tomorrow Night Bright
+# theme = Carbonfox
+# theme = Cobalt Next dark
+# theme = Gitlab Dark Grey
+theme = Cursor Dark
+# theme = Kanso Ink
+
 macos-titlebar-style = hidden
 macos-option-as-alt = true
 shell-integration = detect
