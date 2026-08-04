@@ -22,6 +22,11 @@ start-at-login = true
     cmd-k = 'focus up'
     cmd-l = 'focus right'
 
+    cmd-alt-h = 'join-with left'
+    cmd-alt-j = 'join-with down'
+    cmd-alt-k = 'join-with up'
+    cmd-alt-l = 'join-with right'
+
     cmd-shift-m = 'fullscreen'
     alt-shift-r = 'balance-sizes'
 
