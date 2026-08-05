@@ -16,6 +16,18 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Start AeroSpace at login
 start-at-login = true
 
+# Float app exceptions mirrored from yabai, plus development/test windows.
+on-window-detected = [
+    {
+        if = '''test "%{app-name}" ~= "^(System Settings|Calculator|Karabiner-Elements|Transmission|Stickies|Toggl Track|Playwright|Google Chrome|Chromium)$"''',
+        run = 'layout floating',
+    },
+    {
+        if = '''test "%{window-title}" ~= "(?i)(Playwright|Valorune Dev)"''',
+        run = 'layout floating',
+    },
+]
+
 [mode.main.binding]
     cmd-h = 'focus left'
     cmd-j = 'focus down'
