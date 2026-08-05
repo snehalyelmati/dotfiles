@@ -9,8 +9,19 @@ if [ "$visible" = true ] && printf '%s\n' "$windows" | awk -F '|' -v workspace="
     exit
 fi
 
-printf '%s\n' "$windows" | awk -F '|' 'NF { print $1 }' | while read -r window_id; do
-    aerospace move-node-to-workspace --window-id "$window_id" "$workspace"
+osascript -e 'tell application "System Events" to set visible of process "Stickies" to true' 2>/dev/null
+
+attempts=0
+while aerospace list-windows --all --format '%{window-layout}|%{app-name}' |
+    awk -F '|' '$2 == "Stickies" && $1 != "floating" { found = 1 } END { exit !found }'; do
+    attempts=$((attempts + 1))
+    [ "$attempts" -lt 20 ] || exit 1
+    sleep 0.05
+done
+
+windows=$(aerospace list-windows --all --format '%{window-id}|%{app-name}' | awk -F '|' '$2 == "Stickies" { print $1 }')
+printf '%s\n' "$windows" | while read -r window_id; do
+    [ -n "$window_id" ] && aerospace move-node-to-workspace --window-id "$window_id" "$workspace"
 done
 
 osascript -e 'tell application "Stickies" to activate'
