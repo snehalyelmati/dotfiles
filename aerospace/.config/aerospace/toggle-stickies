@@ -1,10 +1,14 @@
 #!/bin/sh
 
 workspace=$(aerospace list-workspaces --focused)
-windows=$(aerospace list-windows --all --format '%{window-id}|%{workspace}|%{app-name}' | awk -F '|' '$3 == "Stickies"')
-visible=$(osascript -e 'tell application "System Events" to get visible of process "Stickies"' 2>/dev/null)
+windows=$(aerospace list-windows --all --format '%{window-id}|%{workspace}|%{window-layout}|%{app-name}' | awk -F '|' '$4 == "Stickies"')
 
-if [ "$visible" = true ] && printf '%s\n' "$windows" | awk -F '|' -v workspace="$workspace" '$2 == workspace { found = 1 } END { exit !found }'; then
+if [ -z "$windows" ]; then
+    open -a Stickies
+    exit
+fi
+
+if printf '%s\n' "$windows" | awk -F '|' -v workspace="$workspace" '$2 == workspace && $3 != "macos_native_window_of_hidden_app" { found = 1 } END { exit !found }'; then
     osascript -e 'tell application "System Events" to set visible of process "Stickies" to false'
     exit
 fi
@@ -19,9 +23,8 @@ while aerospace list-windows --all --format '%{window-layout}|%{app-name}' |
     sleep 0.05
 done
 
-windows=$(aerospace list-windows --all --format '%{window-id}|%{app-name}' | awk -F '|' '$2 == "Stickies" { print $1 }')
-printf '%s\n' "$windows" | while read -r window_id; do
-    [ -n "$window_id" ] && aerospace move-node-to-workspace --window-id "$window_id" "$workspace"
+printf '%s\n' "$windows" | while IFS='|' read -r window_id window_workspace _; do
+    [ "$window_workspace" = "$workspace" ] || aerospace move-node-to-workspace --window-id "$window_id" "$workspace"
 done
 
-osascript -e 'tell application "Stickies" to activate'
+aerospace focus --window-id "$(printf '%s\n' "$windows" | awk -F '|' 'NR == 1 { print $1 }')"
