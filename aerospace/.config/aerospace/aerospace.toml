@@ -40,6 +40,7 @@ on-window-detected = [
     cmd-alt-l = 'join-with right'
 
     cmd-shift-m = 'fullscreen'
+    cmd-shift-s = 'exec-and-forget $HOME/.config/aerospace/toggle-stickies'
     alt-shift-r = 'balance-sizes'
 
     cmd-ctrl-shift-h = 'swap left'
