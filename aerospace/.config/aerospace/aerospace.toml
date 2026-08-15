@@ -42,6 +42,7 @@ on-window-detected = [
     cmd-shift-m = 'fullscreen'
     cmd-shift-s = 'exec-and-forget $HOME/.config/aerospace/toggle-stickies'
     alt-shift-r = 'balance-sizes'
+    alt-slash = 'layout --root tiles accordion'
 
     cmd-ctrl-shift-h = 'swap left'
     cmd-ctrl-shift-j = 'swap down'
@@ -90,6 +91,9 @@ on-window-detected = [
     alt-shift-c = 'reload-config'
 
 [mode.resize.binding]
+    cmd-h = []
+    cmd-alt-h = []
+
     h = 'resize width -100'
     j = 'resize height +100'
     k = 'resize height -100'
