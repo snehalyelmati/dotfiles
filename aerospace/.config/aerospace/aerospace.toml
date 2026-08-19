@@ -1,7 +1,7 @@
 # Reference: https://github.com/i3/i3/blob/next/etc/config
 
 config-version = 2
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 # i3 doesn't have "normalizations" feature that why we disable them here.
 # But the feature is very helpful.
@@ -75,7 +75,6 @@ on-window-detected = [
     cmd-7 = 'workspace 7'
     cmd-8 = 'workspace 8'
     cmd-9 = 'workspace 9'
-    cmd-0 = 'workspace 10'
 
     cmd-ctrl-1 = 'move-node-to-workspace 1'
     cmd-ctrl-2 = 'move-node-to-workspace 2'
@@ -86,7 +85,6 @@ on-window-detected = [
     cmd-ctrl-7 = 'move-node-to-workspace 7'
     cmd-ctrl-8 = 'move-node-to-workspace 8'
     cmd-ctrl-9 = 'move-node-to-workspace 9'
-    cmd-ctrl-0 = 'move-node-to-workspace 10'
 
     alt-shift-c = 'reload-config'
 
@@ -111,5 +109,4 @@ on-window-detected = [
     6 = 'main'
     7 = 'main'
     8 = 'main'
-    9 = 'main'
-    10 = 'secondary'
+    9 = ['secondary', 'main']
