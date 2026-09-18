@@ -1,30 +1,82 @@
-#!/bin/sh
+#!/usr/bin/env python3
+"""Toggle floating Stickies on the current workspace, one invocation at a time."""
+import fcntl
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import time
 
-workspace=$(aerospace list-workspaces --focused)
-windows=$(aerospace list-windows --all --format '%{window-id}|%{workspace}|%{window-layout}|%{app-name}' | awk -F '|' '$4 == "Stickies"')
+HIDDEN = 'macos_native_window_of_hidden_app'
 
-if [ -z "$windows" ]; then
-    open -a Stickies
-    exit
-fi
 
-if printf '%s\n' "$windows" | awk -F '|' -v workspace="$workspace" '$2 == workspace && $3 != "macos_native_window_of_hidden_app" { found = 1 } END { exit !found }'; then
-    osascript -e 'tell application "System Events" to set visible of process "Stickies" to false'
-    exit
-fi
+def command(*args):
+    return subprocess.check_output(args, text=True, timeout=5).strip()
 
-osascript -e 'tell application "System Events" to set visible of process "Stickies" to true' 2>/dev/null
 
-attempts=0
-while aerospace list-windows --all --format '%{window-layout}|%{app-name}' |
-    awk -F '|' '$2 == "Stickies" && $1 != "floating" { found = 1 } END { exit !found }'; do
-    attempts=$((attempts + 1))
-    [ "$attempts" -lt 20 ] || exit 1
-    sleep 0.05
-done
+def workspace():
+    return command('aerospace', 'list-workspaces', '--focused')
 
-printf '%s\n' "$windows" | while IFS='|' read -r window_id window_workspace _; do
-    [ "$window_workspace" = "$workspace" ] || aerospace move-node-to-workspace --window-id "$window_id" "$workspace"
-done
 
-aerospace focus --window-id "$(printf '%s\n' "$windows" | awk -F '|' 'NR == 1 { print $1 }')"
+def windows():
+    output = command('aerospace', 'list-windows', '--all', '--format',
+                     '%{window-id}|%{workspace}|%{window-layout}|%{app-name}')
+    return [row.split('|') for row in output.splitlines() if row.endswith('|Stickies')]
+
+
+def set_visible(value):
+    command('osascript', '-e', 'tell application "System Events" to set '
+            f'visible of process "Stickies" to {str(value).lower()}')
+
+
+def wait_for_layout(layout):
+    deadline = time.monotonic() + 3
+    while True:
+        notes = windows()
+        if (notes or layout == HIDDEN) and all(row[2] == layout for row in notes):
+            return notes
+        if time.monotonic() >= deadline:
+            raise RuntimeError(f'Stickies did not reach {layout} layout')
+        time.sleep(.05)
+
+
+def toggle():
+    target = workspace()
+    notes = windows()
+    if not notes:
+        command('open', '-a', 'Stickies')
+        return
+
+    if any(row[1] == target and row[2] != HIDDEN for row in notes):
+        set_visible(False)
+        wait_for_layout(HIDDEN)
+        return
+
+    set_visible(True)
+    # Moving hidden windows can resize them; preserve the floating-layout wait.
+    notes = wait_for_layout('floating')
+    for window_id, source, _, _ in notes:
+        if source != target:
+            command('aerospace', 'move-node-to-workspace', '--window-id', window_id, target)
+
+    # A workspace switch while showing notes takes precedence over focusing them.
+    if workspace() == target:
+        command('aerospace', 'focus', '--window-id', notes[0][0])
+
+
+def main():
+    lock = Path(tempfile.gettempdir()) / f'aerospace-stickies-{os.getuid()}.lock'
+    # Keep the inode: unlinking a lock file lets queued callers lock different files.
+    fd = os.open(lock, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+    with os.fdopen(fd, 'w') as handle:
+        fcntl.flock(handle, fcntl.LOCK_EX)
+        toggle()
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (OSError, subprocess.SubprocessError, RuntimeError) as error:
+        print(f'toggle-stickies: {error}', file=sys.stderr)
+        sys.exit(1)
