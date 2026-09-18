@@ -160,6 +160,7 @@ alias ct="clear; tree -I '__pycache__|tmp'"
 alias cpf="clear; pfetch"
 alias vim="nvim"
 alias python="python3"
+alias ampr='if pgrep -f "amp --no-tui --runner-id mac" >/dev/null; then echo "Amp runner mac is already running"; else (cd "$HOME/Documents" && amp --no-tui --runner-id mac --discover-depth 1 2>&1 | rotatelogs amp.log 5M) &; fi'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
